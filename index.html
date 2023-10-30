@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+    
+</head>
+<body>
+    <!-- <a href='https://www.freepik.com/vectors/people'>People vector created by freepik - www.freepik.com</a> -->
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Cov<i class="fa fa-plane "></i>d-Travel</a> 
+          <button  class="askMe-button">Ask Me</button>     
+        </div>
+    </nav>
+
+    <main>
+        <div id="section-1">
+            <div class="banner" data-aos="fade-up">
+                <div id="About" data-aos="fade-in">
+                    <div id='title'><h1>ABOUT</h1></div>
+                    <p><strong>Covid-Travel</strong> is a site dedicated to make planning international trips in the pandemic hassle free 
+                        for its users. All the information that you need to plan a safe and smooth travel to your destination country is merely a 
+                        a click away! You can also use the Ask Me bot to get answers to general travel related queries in the pandemic.<br> <br>
+                     <button  class="btn btn-primary" id="get-started"><a id="get_started" href="#statistics-area">Get Started</a></button></p>     
+                </div>
+                <div id="About-image">
+                    <img src="/imgs/travel.jpg" id="travel">
+                </div>
+            </div>
+
+            <div  id="statistics-area" data-aos="fade-up">
+                <div class="nation-info">
+                    <div class="flag info"></div>
+                    <div class="name info">Loading...</div>
+                    <div class="total-cases info">
+                        <div class="title">Total Cases</div>
+                        <div class="value">0</div>
+                        <div class="new-value">+0</div>
+                    </div>
+                    <div class="recovered info">
+                        <div class="title">Recovered</div>
+                        <div class="value">0</div>
+                        <div class="new-value">+0</div>
+                    </div>
+                    <div class="deaths info">
+                        <div class="title">Deaths</div>
+                        <div class="value">0</div>
+                        <div class="new-value">+0</div>
+                    </div>
+                </div>
+
+                <div id="charts">
+                     <div id="chart" >
+                         <canvas id="chart1"></canvas>
+                    </div>
+                    <div id="chart" >
+                        <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+
+                <div id="travel-bulletin">
+                    <div>
+                        <button  class="btn btn-success mb-3 mt-3 collapsed" id="heading" data-bs-toggle="collapse" data-bs-target="#risk_info" aria-expanded="false" aria-controls="risk_info">HEALTH RISK <i class="fas fa-chevron-circle-down"></i></button>
+                        <div class="collapse" id="risk_info"></div>
+                    </div>
+                    <div>
+                        <button  class="btn btn-success mb-3 collapsed" id="heading" data-bs-toggle="collapse" data-bs-target="#summary" aria-expanded="false" aria-controls="summary">SUMMARY <i class="fas fa-chevron-circle-down"></i></button>
+                        <div class="collapse" id="summary"></div>
+                    </div>
+                    <div>
+                        <button  class="btn btn-success mb-3 collapsed" id="heading" data-bs-toggle="collapse" data-bs-target="#access_restrictions" aria-expanded="false" aria-controls="access_restrictions">RESTRICTIONS <i class="fas fa-chevron-circle-down"></i></button>
+                        <div class="collapse" id="access_restrictions"></div>
+                    </div>
+                    <div>
+                        <button  class="btn btn-success mb-3 collapsed" id="heading" data-bs-toggle="collapse" data-bs-target="#area_policy" aria-expanded="false" aria-controls="area_policy">AREA POLICY <i class="fas fa-chevron-circle-down"></i></button>
+                        <div class="collapse" id="area_policy"></div>
+                    </div>
+                    <div>
+                        <button class="btn btn-success mb-3 collapsed" id="heading" data-bs-toggle="collapse" data-bs-target="#hotspots" aria-expanded="false" aria-controls="hotspots">HOTSPOTS <i class="fas fa-chevron-circle-down"></i></button>
+                        <div class="collapse mb-3" id="hotspots"></div>
+                    </div>
+                    <!-- <div>
+                        <button class="btn btn-success mb-3 collapsed" id="heading" data-bs-toggle="collapse" data-bs-target="#test" aria-expanded="false" aria-controls="test">TEST <i class="fas fa-chevron-circle-down"></i></button>
+                        <div class="collapse" id="test">Testing the collapse feature</div>
+                    </div> -->
+
+                </div>
+
+            </div>        
+
+        </div>
+
+        <div id="section-2" class="mt-4" data-aos="fade-up">
+            <input type="text" id="search-input" placeholder="Search Country..." />              
+        </div>
+
+        <div id="country-selector-bg" data-aos="fade-up">
+            <div id="country-selector">
+
+            </div>
+        </div>
+
+        <iframe id="bot" class="hide" src="https://webchat.botframework.com/embed/webot-a01b-bot?s=gQx2GAHSwLU.aQIGPA6UHOvp0-cGZFSyYDizVkX7WqfW2xyRA5ouhlg" style="height: 502px; max-height: 502px;"></iframe>
+       
+
+    </main>
+    <footer >
+        <div> Designed and developed by Akanksha Verma</div>
+        <div> Copyright © 2022 <i>All Rights Reserved</i></div>        
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/countries.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration : 1000,
+            mirror : true,
+            easing : 'ease-in-out'
+        });
+    
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+        });
+    </script>
+</body>
+</html>
